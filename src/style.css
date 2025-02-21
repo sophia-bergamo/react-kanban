@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@theme {
+  --color-brand-primary_light: #bdffe5;
+  --color-brand-primary_medium: #00d5ad;
+  --color-brand-primary_dark: #0b6c54;
+  --color-brand-primary_xdark: #054434;
+
+  --color-brand-accessory_xlight: #e4f9f3;
+  --color-brand-accessory_light: #92e8cf;
+  --color-brand-accessory_medium: #00b79e;
+  --color-brand-accessory_beige: #fcf9f4;
+  --color-brand-accessory_red: #f11427;
+  --color-brand-accessory_magenta: #b51b76;
+
+  --color-white: #ffffff;
+  --color-gray_xlight: #f8f8f8;
+  --color-gray_light: #e3e3e3;
+  --color-gray_medium: #b5b5b5;
+  --color-gray_dark: #626262;
+  --color-gray_xdark: #313131;
+  --color-gray_xxdark: #121212;
+
+  --color-feedback-success_light: #daf1e2;
+  --color-feedback-success_medium: #379559;
+  --color-feedback-success_dark: #153822;
+
+  --color-feedback-warning_light: #fef3cd;
+  --color-feedback-warning_medium: #dfb623;
+  --color-feedback-warning_dark: #735a02;
+
+  --color-feedback-error_light: #f8d3d2;
+  --color-feedback-error_medium: #d42f28;
+  --color-feedback-error_dark: #7c1b18;
+  --color-feedback-error_xdark: #450f0d;
+
+  --color-icons-lightbg_clicable: #313131;
+  --color-icons-lightbg_disable: #b5b5b5;
+  --color-icons-lightbg_information: #626262;
+
+  --color-icons-darkbg_selected: #ffffff;
+  --color-icons-darkbg_not-selected: #b5b5b5;
+  --color-icons-darkbg_information: #626262;
+
+  --font-primary: "Poppings", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+
+  --font-size-xxs: 14px;
+  --font-size-xs: 16px;
+  --font-size-sm: 18px;
+  --font-size-md: 20px;
+  --font-size-lg: 24px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 40px;
+
+  --font-primary-regular: 400;
+  --font-primary-medium: 500;
+  --font-primary-semibold: 600;
+  --font-primary-bold: 700;
+
+  --font-secondary-regular: 400;
+  --font-secondary-semibold: 600;
+  --font-secondary-bold: 700;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --breakpoint-sm: 390px;
+  --breakpoint-md: 860px;
+  --breakpoint-lg: 1280px;
+}
