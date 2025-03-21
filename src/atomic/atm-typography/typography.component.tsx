@@ -17,11 +17,7 @@ type TypographyProps = HTMLAttributes<HTMLSpanElement> & {
     | "inputCaption";
 };
 
-export function Typography({
-  variant = "heading1",
-  children,
-  ...props
-}: TypographyProps) {
+export function Typography({ variant, children, ...props }: TypographyProps) {
   return (
     <span className={typography({ variant })} {...props}>
       {children}
