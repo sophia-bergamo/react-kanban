@@ -14,6 +14,7 @@
   --color-brand-accessory-magenta: #b51b76;
 
   --color-cta: #a3da58;
+  --color-cta-dark: #034224;
   --color-white: #ffffff;
   --color-gray-xlight: #f8f8f8;
   --color-gray-light: #e3e3e3;
@@ -47,13 +48,13 @@
   --font-primary: "Poppings", sans-serif;
   --font-secondary: "Open Sans", sans-serif;
 
-  --font-size-xxs: 14px;
-  --font-size-xs: 16px;
-  --font-size-sm: 18px;
-  --font-size-md: 20px;
-  --font-size-lg: 24px;
-  --font-size-xl: 28px;
-  --font-size-xxl: 40px;
+  --text-size-xxs: 14px;
+  --text-size-xs: 16px;
+  --text-size-sm: 18px;
+  --text-size-md: 20px;
+  --text-size-lg: 24px;
+  --text-size-xl: 28px;
+  --text-size-xxl: 40px;
 
   --font-primary-regular: 400;
   --font-primary-medium: 500;
@@ -63,6 +64,10 @@
   --font-secondary-regular: 400;
   --font-secondary-semibold: 600;
   --font-secondary-bold: 700;
+
+  --line-height-xs: 100%;
+  --line-height-sm: 120%;
+  --line-height-md: 150%;
 
   --spacing-xs: 4px;
   --spacing-sm: 8px;
