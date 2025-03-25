@@ -1,34 +1,20 @@
-import { Button } from "../../../atomic/atm-button";
+import { Typography } from "../../../atomic/atm-typography";
 
 export default function LoginPage() {
   return (
     <div className="items-center justify-center h-screen flex flex-col w-full">
-      <div className="p-md flex gap-md">
-        <Button variant="primary">Button Label</Button>
-        <Button variant="secondary">Button Label</Button>
-        <Button variant="cta">Button Label</Button>
-        <Button variant="link">Button Label</Button>
-      </div>
-
-      <div className="p-md flex gap-md">
-        <Button variant="primaryDestructive">Button Label</Button>
-        <Button variant="secondaryDestructive">Button Label</Button>
-        <Button variant="primaryDestructive" disabled={true}>
-          Button Label
-        </Button>
-        <Button variant="secondaryDestructive" disabled={true}>
-          Button Label
-        </Button>
-      </div>
-
-      <div className="p-md flex gap-md">
-        <Button variant="cta" disabled={true}>
-          Button Label
-        </Button>
-        <Button variant="link" disabled={true}>
-          Button Label
-        </Button>
-      </div>
+      <Typography variant="display">Display</Typography>
+      <Typography variant="heading1">Heading 1</Typography>
+      <Typography variant="heading2">Heading 2</Typography>
+      <Typography variant="heading3">Heading 3</Typography>
+      <Typography variant="heading4">Heading 4</Typography>
+      <Typography variant="body1">Body 1</Typography>
+      <Typography variant="body2">Body 2</Typography>
+      <Typography variant="link">Link</Typography>
+      <Typography variant="linkSmall">Link Small</Typography>
+      <Typography variant="inputLabel">Input Label</Typography>
+      <Typography variant="inputValue">Input Value</Typography>
+      <Typography variant="inputCaption">Input Caption</Typography>
     </div>
   );
 }
