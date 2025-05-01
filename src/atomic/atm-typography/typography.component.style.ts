@@ -13,7 +13,7 @@ export const typography = tv({
       body2: "font-regular text-size-xxs text-gray-dark line-height-md",
       link: "font-semibold text-size-xs text-cta-dark line-height-md",
       linkSmall: "font-semibold text-size-xxs text-cta-dark line-height-md",
-      inputLabel: "font-regular font-size-sm text-gray-dark line-height-md",
+      inputLabel: "text-size-xxs font-semibold text-gray-dark line-height-md",
       inputValue: "font-regular font-size-sm text-gray-medium line-height-md",
       inputCaption:
         "font-regular font-size-sm text-feedback-warning-dark line-height-md",
