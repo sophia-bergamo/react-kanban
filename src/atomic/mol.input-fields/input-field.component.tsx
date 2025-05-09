@@ -5,7 +5,7 @@ import { Input } from "../atm-input/input.component";
 interface InputFieldProps {
   name: string;
   label: string;
-  type: "email" | "password";
+  type: "text" | "email" | "password";
   placeholder: string;
   className?: string;
 }
