@@ -1,1 +1,1 @@
-export { Text as Typography } from "./typography.component";
+export { Text } from "./typography.component";
