@@ -14,10 +14,11 @@ type TypographyProps = HTMLAttributes<HTMLSpanElement> & {
     | "linkSmall"
     | "inputLabel"
     | "inputValue"
-    | "inputCaption";
+    | "inputCaption"
+    | "inputCaptionError";
 };
 
-export function Typography({ variant, children, ...props }: TypographyProps) {
+export function Text({ variant, children, ...props }: TypographyProps) {
   return (
     <span className={typography({ variant })} {...props}>
       {children}
