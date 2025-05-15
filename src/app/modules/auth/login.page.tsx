@@ -3,22 +3,23 @@ import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { InputField } from "@/atomic/mol.input-fields/input-field.component";
+import { loginStrings } from "./login.strings";
 
 const formSchema = z.object({
-  useremail: z
-    .string({ message: "Insira seu email" })
-    .email({ message: "Email inválido" }),
-  userpassword: z
-    .string({ message: "Insira a senha" })
-    .min(7, { message: "A senha deve conter no mínimo 7 dígitos" }),
+  userEmail: z
+    .string({ message: loginStrings.email })
+    .email({ message: loginStrings.emailError }),
+  userPassword: z
+    .string({ message: loginStrings.password })
+    .min(7, { message: loginStrings.passwordError }),
 });
 
 export default function LoginPage() {
   const methods = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      useremail: "",
-      userpassword: "",
+      userEmail: "",
+      userPassword: "",
     },
   });
 
@@ -31,21 +32,21 @@ export default function LoginPage() {
       <div className="flex items-center justify-center min-h-screen bg-white">
         <form
           onSubmit={methods.handleSubmit(onSubmit)}
-          className="w-xxxl p-6 bg-white shadow-md rounded-lg"
+          className="w-xxxl p-md bg-white shadow-md rounded-lg"
         >
           <div className="flex flex-col gap-md">
             <InputField
-              name="useremail"
-              label="Email"
+              name="userEmail"
               type="email"
-              placeholder="Digite seu email"
+              label={loginStrings.labelEmail}
+              placeholder={loginStrings.emailPlacheholder}
               className="flex flex-col gap-sm"
             />
             <InputField
-              name="userpassword"
-              label="Senha"
+              name="userPassword"
               type="password"
-              placeholder="Digite sua senha"
+              label={loginStrings.labelPassword}
+              placeholder={loginStrings.passwordPlaceholder}
               className="flex flex-col gap-sm"
             />
             <Button type="submit">Entrar</Button>
