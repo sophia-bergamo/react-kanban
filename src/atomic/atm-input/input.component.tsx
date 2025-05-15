@@ -7,7 +7,6 @@ type InputProps = VariantProps<typeof input> & {
 };
 
 export function Input({
-  variant = "primary",
   disabled,
   className,
   type,
@@ -17,7 +16,7 @@ export function Input({
     <input
       type={type}
       data-slot="input"
-      className={cn(input({ variant, disabled }), className)}
+      className={cn(input({ disabled }), className)}
       {...props}
     />
   );
