@@ -7,4 +7,5 @@ export const loginStrings = {
   emailPlacheholder: "Digite seu email",
   labelPassword: "Senha",
   passwordPlaceholder: "Digite sua senha",
+  submit: "Entrar",
 };

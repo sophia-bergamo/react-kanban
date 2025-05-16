@@ -49,7 +49,7 @@ export default function LoginPage() {
               placeholder={loginStrings.passwordPlaceholder}
               className="flex flex-col gap-sm"
             />
-            <Button type="submit">Entrar</Button>
+            <Button type="submit">{loginStrings.submit}</Button>
           </div>
         </form>
       </div>
