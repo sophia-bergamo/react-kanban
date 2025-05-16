@@ -17,6 +17,8 @@ export const typography = tv({
       inputValue: "font-regular font-size-sm text-gray-medium line-height-md",
       inputCaption:
         "font-regular font-size-sm text-feedback-warning-dark line-height-md",
+      inputCaptionError:
+        "!text-size-xxs text-feedback-error-dark line-height-md",
     },
   },
 });
