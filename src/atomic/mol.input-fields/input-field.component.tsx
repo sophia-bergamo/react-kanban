@@ -2,10 +2,10 @@ import { useFormContext } from "react-hook-form";
 import { Text } from "../atm-typography/typography.component";
 import { Input } from "../atm-input/input.component";
 
-interface InputFieldProps {
+export interface InputFieldProps {
   name: string;
   label: string;
-  type: "email" | "password";
+  type: "text" | "email" | "password";
   placeholder: string;
   className?: string;
 }
@@ -25,12 +25,7 @@ export function InputField({
   return (
     <div className={className}>
       <Text variant="inputLabel">{label}</Text>
-      <Input
-        variant="primary"
-        type={type}
-        {...register(name)}
-        placeholder={placeholder}
-      />
+      <Input type={type} {...register(name)} placeholder={placeholder} />
       {errors[name]?.message && (
         <Text variant="inputCaptionError">{String(errors[name]?.message)}</Text>
       )}

@@ -34,7 +34,7 @@ export default function LoginPage() {
           onSubmit={methods.handleSubmit(onSubmit)}
           className="w-xxxl p-md bg-white shadow-md rounded-lg"
         >
-          <div className="flex flex-col gap-md">
+          <div className="w-xxxl flex flex-col gap-md">
             <InputField
               name="userEmail"
               type="email"
