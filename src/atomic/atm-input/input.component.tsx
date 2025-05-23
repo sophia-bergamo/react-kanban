@@ -13,7 +13,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ disabled, className, type, ...props }, ref) => {
     return (
       <input
-        ref={ref} // aqui repassa a ref
+        ref={ref}
         type={type}
         data-slot="input"
         className={cn(input({ disabled }), className)}
@@ -25,7 +25,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
 export function InputIcon({ children, ...props }: InputIconProps) {
   return (
-    <button className="flex outline-none" {...props}>
+    <button className="flex" {...props}>
       {children}
     </button>
   );

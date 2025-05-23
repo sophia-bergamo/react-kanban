@@ -30,7 +30,7 @@ export default function LoginPage() {
   });
 
   const onSubmit = (values: any) => {
-    console.log("aqui");
+    console.log("dados: " + values);
   };
 
   return (
