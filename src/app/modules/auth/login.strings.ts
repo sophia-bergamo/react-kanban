@@ -8,4 +8,12 @@ export const loginStrings = {
   labelPassword: "Senha",
   passwordPlaceholder: "Digite sua senha",
   submit: "Entrar",
+  loginNav: "Voltar para o início",
+  enterOrSignIn: "Entre ou cadastre-se",
+  loginDescription:
+    "Para entrar na plataforma é necessário entrar ou criar uma conta.",
+  forgotPassword: "Esqueceu a senha?",
+  or: "ou",
+  signInQuestion: "Ainda não tem uma conta?",
+  signIn: "Cadastre-se",
 };

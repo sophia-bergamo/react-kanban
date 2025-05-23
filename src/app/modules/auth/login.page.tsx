@@ -4,6 +4,12 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { InputField } from "@/atomic/mol.input-fields/input-field.component";
 import { loginStrings } from "./login.strings";
+import ArrowBack from "@/app/assets/arrow-back";
+import { Text } from "@/atomic/atm-typography";
+import LoginLine from "@/app/assets/login-line";
+import LoginSideImage from "@/atomic/atm.side-image/login-side-image.component";
+import LoginImage from "../../assets/login-img.png";
+import { PasswordField } from "@/atomic/mol.password-input/password-field.component";
 
 const formSchema = z.object({
   userEmail: z
@@ -24,35 +30,73 @@ export default function LoginPage() {
   });
 
   const onSubmit = (values: any) => {
-    console.log("dados: " + values);
+    console.log("aqui");
   };
 
   return (
-    <FormProvider {...methods}>
-      <div className="flex items-center justify-center min-h-screen bg-white">
-        <form
-          onSubmit={methods.handleSubmit(onSubmit)}
-          className="w-xxxl p-md bg-white shadow-md rounded-lg"
-        >
-          <div className="w-xxxl flex flex-col gap-md">
-            <InputField
-              name="userEmail"
-              type="email"
-              label={loginStrings.labelEmail}
-              placeholder={loginStrings.emailPlacheholder}
-              className="flex flex-col gap-sm"
-            />
-            <InputField
-              name="userPassword"
-              type="password"
-              label={loginStrings.labelPassword}
-              placeholder={loginStrings.passwordPlaceholder}
-              className="flex flex-col gap-sm"
-            />
-            <Button type="submit">{loginStrings.submit}</Button>
+    <div className="items-center h-screen flex flex-rol w-full">
+      <div className="flex flex-1 flex-col h-full">
+        <nav className="py-lg px-lg">
+          <Button variant="link">
+            <div className="flex gap-sm">
+              <ArrowBack /> {loginStrings.loginNav}
+            </div>
+          </Button>
+        </nav>
+
+        <div className="flex justify-center w-full h-full px-lg">
+          <div className="flex flex-1 flex-col items-center justify-center gap-sm max-w-[448px] px-xl">
+            <Text variant="heading1">{loginStrings.enterOrSignIn}</Text>
+
+            <div className="text-center">
+              <Text variant="body1">{loginStrings.loginDescription}</Text>
+            </div>
+
+            <FormProvider {...methods}>
+              <form
+                onSubmit={methods.handleSubmit(onSubmit)}
+                className="w-full max-w-[400px] py-lg"
+              >
+                <div className="flex flex-col gap-md w-full">
+                  <InputField
+                    name="userEmail"
+                    type="email"
+                    label={loginStrings.labelEmail}
+                    placeholder={loginStrings.emailPlacheholder}
+                    className="flex w-full flex-col gap-sm"
+                  />
+                  <PasswordField
+                    name="userPassword"
+                    label={loginStrings.labelPassword}
+                    placeholder={loginStrings.passwordPlaceholder}
+                    className="flex w-full flex-col gap-sm"
+                  />
+
+                  <div className="flex justify-end">
+                    <Button type="button" variant="link">
+                      {loginStrings.forgotPassword}
+                    </Button>
+                  </div>
+
+                  <Button type="submit">{loginStrings.submit}</Button>
+                </div>
+              </form>
+            </FormProvider>
+
+            <div className="flex items-center gap-sm">
+              <LoginLine />
+              <Text variant="body2">{loginStrings.or}</Text>
+              <LoginLine />
+            </div>
+
+            <div className="flex items-center">
+              <Text variant="body1">{loginStrings.signInQuestion}</Text>
+              <Button variant="link">{loginStrings.signIn}</Button>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-    </FormProvider>
+      <LoginSideImage src={LoginImage} alt="Imagem do login" />
+    </div>
   );
 }
