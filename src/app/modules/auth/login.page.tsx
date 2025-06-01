@@ -10,6 +10,7 @@ import LoginLine from "@/app/assets/login-line";
 import LoginSideImage from "@/atomic/atm.side-image/login-side-image.component";
 import LoginImage from "../../assets/login-img.png";
 import { PasswordField } from "@/atomic/mol.password-input/password-field.component";
+import { useLogin } from "@/app/domain/auth/login.use-case";
 
 const formSchema = z.object({
   userEmail: z
@@ -29,8 +30,22 @@ export default function LoginPage() {
     },
   });
 
+  const { login, loading } = useLogin({
+    onCompleted: (data) => {
+      console.log("Login bem-sucedido:", data);
+    },
+    onError: (error) => {
+      console.error("Erro no login:", error);
+    },
+  });
+
   const onSubmit = (values: any) => {
-    console.log("dados: " + values);
+    login({
+      data: {
+        email: values.email,
+        password: values.password,
+      },
+    });
   };
 
   return (
@@ -78,7 +93,9 @@ export default function LoginPage() {
                     </Button>
                   </div>
 
-                  <Button type="submit">{loginStrings.submit}</Button>
+                  <Button type="submit" disabled={loading}>
+                    {loading ? loginStrings.loading : loginStrings.submit}
+                  </Button>
                 </div>
               </form>
             </FormProvider>
