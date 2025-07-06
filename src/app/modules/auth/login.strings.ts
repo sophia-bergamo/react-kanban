@@ -16,4 +16,5 @@ export const loginStrings = {
   or: "ou",
   signInQuestion: "Ainda não tem uma conta?",
   signIn: "Cadastre-se",
+  loading: "Entrando...",
 };
